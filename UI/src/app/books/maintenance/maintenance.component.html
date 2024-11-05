@@ -1,0 +1,90 @@
+<div class="card-container">
+  <mat-card>
+    <mat-card-header>
+      <h1>Add New Category</h1>
+    </mat-card-header>
+    <mat-card-content [formGroup]="newCategory">
+      <div class="input-row">
+        <mat-form-field color="accent">
+          <mat-label>Category</mat-label>
+          <input matInput formControlName="category" />
+        </mat-form-field>
+        <mat-form-field color="accent">
+          <mat-label>SubCategory</mat-label>
+          <input matInput formControlName="subCategory" />
+        </mat-form-field>
+        <button
+          class="addDelete"
+          mat-stroked-button
+          color="accent"
+          [disabled]="newCategory.invalid"
+          (click)="addNewCategory()"
+        >
+          <span>Add Category</span>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <h1>Add New Book</h1>
+    </mat-card-header>
+    <mat-card-content [formGroup]="newBook">
+      <mat-form-field color="accent">
+        <mat-label>Book Title</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+      <mat-form-field color="accent">
+        <mat-label>Book Author</mat-label>
+        <input matInput formControlName="author" />
+      </mat-form-field>
+      <mat-form-field color="accent">
+        <mat-label>Book Price</mat-label>
+        <input matInput formControlName="price" />
+      </mat-form-field>
+      <mat-form-field color="accent">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category" #categorySelect>
+          <mat-option
+            *ngFor="let option of categoryOptions"
+            [value]="option.value"
+          >
+            {{ option.displayValue | titlecase }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button
+        mat-stroked-button
+        color="accent"
+        [disabled]="newBook.invalid || categorySelect.empty"
+        (click)="addNewBook()"
+      >
+        <span>Add Book</span>
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <h1>Delete Existing Book</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="input-row">
+        <mat-form-field color="accent">
+          <mat-label>Book ID</mat-label>
+          <input matInput [formControl]="deleteBook" />
+        </mat-form-field>
+        <button
+          class="Delete"
+          mat-stroked-button
+          color="accent"
+          [disabled]="deleteBook.invalid"
+          (click)="deleteExistingBook()"
+        >
+          <span>Delete Book</span>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

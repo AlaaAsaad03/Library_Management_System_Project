@@ -1,0 +1,48 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%; /* Ensures the toolbar takes the full width */
+  overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevents the logo from shrinking */
+
+    img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevents the user info from shrinking */
+
+    .user-greeting {
+      margin-right: 20px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .user-actions {
+      display: flex;
+      align-items: center;
+
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+}

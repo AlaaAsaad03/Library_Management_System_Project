@@ -1,0 +1,171 @@
+@import "../../../theme.scss";
+$dark-accent-A200: #03a9f4;
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  width: 90%;
+  margin: 0;
+  padding: 2rem;
+}
+
+.register-form,
+.library-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 600px;
+}
+
+.register-form {
+  mat-card {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+    height: 90%;
+    mat-card-header {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+
+      mat-card-title {
+        font-size: 2rem;
+        color: $dark-accent-A200;
+        font-weight: bold;
+      }
+    }
+
+    mat-card-content {
+      padding: 1rem 0;
+      height: 70%;
+
+      mat-grid-list {
+        margin-bottom: 1rem;
+
+        mat-grid-tile {
+          mat-form-field {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding-top: 0.5rem;
+          }
+        }
+      }
+    }
+
+    mat-card-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 1rem;
+        color: $dark-accent-A200;
+      }
+
+      a {
+        text-decoration: none;
+        color: $dark-accent-A200;
+        border: 1px solid $dark-accent-A200;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+          background-color: $dark-accent-A200;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.library-info {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border: none;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2rem;
+  height: 70%;
+
+  h1 {
+    font-size: 2rem;
+    color: $dark-accent-A200;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: red;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background: $dark-accent-A200;
+    }
+  }
+
+  mat-list {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+
+    mat-list-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-style: normal;
+        margin: 0;
+        white-space: normal;
+        line-height: 1.6;
+        color: black;
+        font-weight: 500;
+        overflow: visible;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-weight: 500;
+      }
+    }
+  }
+}

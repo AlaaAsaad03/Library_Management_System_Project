@@ -1,0 +1,28 @@
+@use "@angular/material" as mat;
+
+// Define a new primary palette
+$custom-primary: mat.define-palette(mat.$blue-grey-palette, 900, 500, 700);
+
+// Define a new accent palette
+$custom-accent: mat.define-palette(mat.$light-blue-palette, A200, A100, A400);
+
+// Define a new warn palette
+$custom-warn: mat.define-palette(mat.$red-palette, A400, A200, A700);
+
+// Get a specific color if needed (like A200 from the accent palette)
+$dark-accent-A200: mat.get-color-from-palette($custom-accent, A200);
+
+// Define a custom theme using the new colors
+$custom-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+  )
+);
+
+// Include the updated theme in your project
+@include mat.core();
+@include mat.all-component-themes($custom-theme);

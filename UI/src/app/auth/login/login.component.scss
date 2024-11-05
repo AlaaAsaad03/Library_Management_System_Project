@@ -1,0 +1,89 @@
+$dark-accent-A200: #03a9f4;
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-image: url("../../../assets/frame.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  mat-card {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+
+    mat-card-header {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+
+      mat-card-title {
+        font-size: 2rem;
+        color: $dark-accent-A200;
+        font-weight: bold;
+      }
+    }
+
+    mat-card-content {
+      padding: 1rem 0;
+    }
+
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding-top: 0.5rem;
+    }
+
+    mat-card-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $dark-accent-A200;
+        border: 1px solid $dark-accent-A200;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+          background-color: $dark-accent-A200;
+          color: white;
+        }
+      }
+    }
+  }
+}

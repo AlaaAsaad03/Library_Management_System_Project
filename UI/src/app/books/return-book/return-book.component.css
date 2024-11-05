@@ -1,0 +1,32 @@
+mat-card {
+  width: -moz-max-content;
+  width: max-content;
+}
+mat-card mat-form-field {
+  margin-right: 1rem;
+}
+mat-card .fine {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+mat-card .fine button {
+  width: -moz-max-content;
+  width: max-content;
+}
+mat-card .fine span {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-style: italic;
+}
+mat-card button {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+}/*# sourceMappingURL=return-book.component.css.map */

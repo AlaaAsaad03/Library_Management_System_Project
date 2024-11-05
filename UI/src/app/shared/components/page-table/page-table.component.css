@@ -1,0 +1,7 @@
+table .mat-mdc-header-cell,
+table .mat-mdc-cell {
+  font-size: 1.2rem;
+}
+table .mat-mdc-header-cell {
+  font-style: italic;
+}/*# sourceMappingURL=page-table.component.css.map */

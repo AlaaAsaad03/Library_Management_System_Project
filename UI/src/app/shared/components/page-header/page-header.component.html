@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <!-- Logo Section -->
+  <div class="logo">
+    <img
+      src="../../../../assets/lgog.png"
+      alt="Library Management System Logo"
+    />
+  </div>
+
+  <!-- Spacer to push content to the right -->
+  <span class="spacer"></span>
+
+  <!-- User Info and Buttons Section -->
+  <div class="user-info" *ngIf="!isAuthPage">
+    <div class="user-greeting" *ngIf="loggedIn">Hi, {{ name }}</div>
+    <div class="user-actions">
+      <button mat-raised-button color="accent" routerLink="/profile">
+        Profile
+      </button>
+      <button mat-raised-button color="warn" (click)="logout()">Log Out</button>
+    </div>
+  </div>
+</mat-toolbar>
