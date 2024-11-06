@@ -32,7 +32,7 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/library-management-system.git
+   git clone https://github.com/AlaaAsaad03/library-management-system.git
    ```
 
 2. Navigate to the project directory:
@@ -44,14 +44,14 @@ Make sure you have the following installed:
 3. Install the dependencies for Angular:
 
    ```bash
-   cd ClientApp
+   cd UI
    npm install
    ```
 
 4. Set up the back-end:
 
    ```bash
-   cd ../ServerApp
+   cd ../API
    dotnet restore
    ```
 
@@ -66,7 +66,7 @@ Make sure you have the following installed:
 7. Run the front-end Angular app:
 
    ```bash
-   cd ../ClientApp
+   cd ../UI
    ng serve
    ```
 
@@ -75,12 +75,54 @@ Make sure you have the following installed:
 1. Access the application in your browser at `http://localhost:4200/`.
 2. Log in as an admin, librarian, or member to explore different features.
 
-## API Endpoints
+### API Endpoints
 
-- **/api/books**: Manage book information
-- **/api/users**: Manage library members and staff
-- **/api/borrow**: Handle borrowing and returning of books
+**Library**
 
-## Contributing
+- **Register User**
+  - `POST /api/Library/Register`
 
-Contributions are welcome! Please open an issue or submit a pull request if you'd like to contribute to the project.
+- **User Login**
+  - `GET /api/Library/Login`
+
+- **Retrieve Books**
+  - `GET /api/Library/GetBooks`
+
+- **Order a Book**
+  - `POST /api/Library/OrderBook`
+
+- **Get User's Orders**
+  - `GET /api/Library/GetOrdersOFUser`
+
+- **Add Book Category**
+  - `POST /api/Library/AddCategory`
+
+- **Retrieve Categories**
+  - `GET /api/Library/GetCategories`
+
+- **Add Book to Library**
+  - `POST /api/Library/AddBook`
+
+- **Delete Book from Library**
+  - `DELETE /api/Library/DeleteBook`
+
+- **Return Book**
+  - `GET /api/Library/ReturnBook`
+
+- **Retrieve Users**
+  - `GET /api/Library/GetUsers`
+
+- **Approve Borrow Request**
+  - `GET /api/Library/ApproveRequest`
+
+- **Retrieve All Orders**
+  - `GET /api/Library/GetOrders`
+
+- **Send Email Notifications for Pending Returns**
+  - `GET /api/Library/SendEmailForPendingReturns`
+
+- **Block Users with Overdue Fines**
+  - `GET /api/Library/BlockFineOverdueUsers`
+
+- **Unblock User**
+  - `GET /api/Library/Unblock`
